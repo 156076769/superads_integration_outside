@@ -1,0 +1,9 @@
+---在线集成文档，非网盟ad network---
+
+SDK Android 开发（Android App的集成指导文档）
+http://platform.superads.cn/doc/index.html#/doc?lang=cn
+http://platform.superads.cn/doc/index.html#/doc
+
+SDK Online API（客户的客户端不想接我们SDK，想自己实现，或者想通过他们自己服务器请求中转广告，用此API，注意这不是程序化交易API）
+http://platform.superads.cn/api/index.html#/api?lang=cn
+http://platform.superads.cn/api/index.html#/api
