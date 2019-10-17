@@ -52,6 +52,21 @@ adCard.setContentType(AdContentType.PLAYABLE);
 ```java
 adCard.setPlacementId("PLACEMENT_ID")
 ```
+容纳Ad的view:
+```java
+bannerContainer:
+
+  <FrameLayout
+    android:id="@+id/banner_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="30dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    />
+```
 设置广告加载的回调:
 ```java
 adCard.setAdListener(new SaAdListener() {  

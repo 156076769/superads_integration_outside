@@ -55,6 +55,21 @@ Set placement ID (from dashboard):
 ```java
 adCard.setPlacementId("PLACEMENT_ID")
 ```
+Ad Container View:
+```java
+bannerContainer:
+
+  <FrameLayout
+    android:id="@+id/banner_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="30dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    />
+```
 Create callback for events:
 ```java
 adCard.setAdListener(new SaAdListener() {  
