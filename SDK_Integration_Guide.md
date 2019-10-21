@@ -1,7 +1,7 @@
 # Android SDK - SuperADS
-**Latest Version:** 0.2.9
+**Latest Version:** 1.2.6
 
-**Release Date:** 19.09.19
+**Release Date:** 17.10.19
 
 This SuperADS SDK allows you to add several Advertisements to your project. 
 From Banner Ad, Interstitial Ad, Video Ad, rewareded Ad and Native Ad. 
@@ -25,7 +25,7 @@ Android device or emulator with Android SDK v4.1+
 Add the following to your dependencies section in module's build.grade file:
 ```java
 dependencies {
-    implementation 'com.superads.android:adsdk:0.2.9'
+    implementation 'cn.superads:sdk:1.2.6'
 }
 ```
 
@@ -35,7 +35,7 @@ dependencies {
 This code should be called only once in app life cycle. Best to call it from MainAcitivity.onCreate:
 (**your publisher id** is chosen by the user).
 ```java
-SuperAds.initialize(this, <Your_publisher_id>, <Your_app_id>);
+SuperAds.initialize(this, <Your_publisher_id>);
 ```
 <a name="3"></a>
 ## Types of Advertisements (examples)
@@ -53,7 +53,7 @@ adCard.setContentType(AdContentType.PLAYABLE);
 ```
 Set placement ID (from dashboard):
 ```java
-adCard.setPlacementId("PLACEMENT_ID")
+adCard. setAdUnitId("<ad_unit_id>")
 ```
 Ad Container View:
 ```java
@@ -72,7 +72,7 @@ bannerContainer:
 ```
 Create callback for events:
 ```java
-adCard.setAdListener(new SaAdListener() {  
+adCard.setAdListener(new SAAdListener() {  
   @Override  
   public void onAdLoaded(SAAdCard card) {  
     bannerContainer.addView(adCard.getAdView());  //Adding the view to container to show on the screen
@@ -103,11 +103,11 @@ adCard.setContentType(AdContentType.PLAYABLE);
 ```
 Set placement ID (from dashboard):
 ```java
-adCard.setPlacementId("PLACEMENT_ID")
+adCard. setAdUnitId("<ad_unit_id>")
 ```
 Create callback for events:
 ```java
-adCard.setAdListener(new SaAdListener() {  
+adCard.setAdListener(new SAAdListener() {  
   @Override  
   public void onAdLoaded(SAAdCard card) {  
 	adCard.show(); // Show the ad
@@ -134,11 +134,11 @@ SAAdCard adCard = SuperAds.getInstance().createVideoAdCard(adSize, this);
 ```
 Set placement ID (from dashboard):
 ```java
-adCard.setPlacementId("PLACEMENT_ID")
+adCard. setAdUnitId("<ad_unit_id>")
 ```
 Create callback for events:
 ```java
-adCard.setAdListener(new SaAdListener() {  
+adCard.setAdListener(new SAAdListener() {  
   @Override  
   public void onAdLoaded(SAAdCard card) {  
     adCard.show(); // Start playing the video ad
@@ -171,11 +171,11 @@ SAAdCard adCard = SuperAds.getInstance().createRewardedVideoAdCard(adSize, this)
 ```
 Set placement ID (from dashboard):
 ```java
-adCard.setPlacementId("PLACEMENT_ID")
+adCard. setAdUnitId("<ad_unit_id>")
 ```
 Create callback for events:
 ```java
-adCard.setAdListener(new SaAdListener() {  
+adCard.setAdListener(new SAAdListener() {  
   @Override  
   public void onAdLoaded(SAAdCard card) {  
     adCard.show(); // Start playing the video ad
@@ -209,7 +209,7 @@ Create NativeAd instance:
 SAAdCard adCard = SuperAds.getInstance().createNativeAdCard(this);
 ```
 ```java
-adCard.setPlacementId("PLACEMENT_ID")
+adCard. setAdUnitId("<ad_unit_id>")
 ```
 Set UI fields to fill in after ad is loaded (optional):
 ```java
@@ -222,7 +222,7 @@ Set UI fields to fill in after ad is loaded (optional):
   ```
   Create callback for events:
 ```java
-adCard.setAdListener(new SaAdListener() {  
+adCard.setAdListener(new SAAdListener() {  
   @Override  
   public void onAdLoaded(SAAdCard card) {  
     adCard.show(); // Show just loaded ad

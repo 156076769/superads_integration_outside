@@ -1,7 +1,7 @@
 # Android SDK - SuperADS
-**Latest Version:** 0.2.9
+**Latest Version:** 1.2.6
 
-**Release Date:** 19.09.19
+**Release Date:** 17.10.19
 
 SuperADS SDK 可以为你的App添加横幅，插屏，视频，奖励视频和原生（信息流）广告。
 这个SDK可以运行在Android Phone和Tablets上面。
@@ -24,7 +24,7 @@ Android device or emulator with Android SDK v4.1+
 在你的build.gradle里面添加以下库依赖
 ```java
 dependencies {
-    implementation 'com.superads.android:adsdk:0.2.9'
+    implementation 'cn.superads:sdk:1.2.6'
 }
 ```
 
@@ -32,7 +32,7 @@ dependencies {
 ## Integrate the SDK with your code
 初始化SDK，在你的App运行周期内初始化只能调用一次，建议在MainActivity的onCreate里面初始化
 ```java
-SuperAds.initialize(this, <Your_publisher_id>, <Your_app_id>);
+SuperAds.initialize(this, <Your_publisher_id>);
 ```
 <a name="3"></a>
 ## Types of Advertisements (examples)
@@ -50,7 +50,7 @@ adCard.setContentType(AdContentType.PLAYABLE);
 ```
 设置广告位:
 ```java
-adCard.setPlacementId("PLACEMENT_ID")
+adCard. setAdUnitId("<ad_unit_id>")
 ```
 容纳Ad的view:
 ```java
@@ -69,7 +69,7 @@ bannerContainer:
 ```
 设置广告加载的回调:
 ```java
-adCard.setAdListener(new SaAdListener() {  
+adCard.setAdListener(new SAAdListener() {  
   @Override  
   public void onAdLoaded(SAAdCard card) {  
     bannerContainer.addView(adCard.getAdView());  //Adding the view to container to show on the screen
@@ -100,11 +100,11 @@ adCard.setContentType(AdContentType.PLAYABLE);
 ```
 设置广告位:
 ```java
-adCard.setPlacementId("PLACEMENT_ID")
+adCard. setAdUnitId("<ad_unit_id>")
 ```
 设置广告加载的回调:
 ```java
-adCard.setAdListener(new SaAdListener() {  
+adCard.setAdListener(new SAAdListener() {  
   @Override  
   public void onAdLoaded(SAAdCard card) {  
 	adCard.show(); // Show the ad
@@ -131,11 +131,11 @@ SAAdCard adCard = SuperAds.getInstance().createVideoAdCard(adSize, this);
 ```
 设置广告位:
 ```java
-adCard.setPlacementId("PLACEMENT_ID")
+adCard. setAdUnitId("<ad_unit_id>")
 ```
 设置广告加载的回调:
 ```java
-adCard.setAdListener(new SaAdListener() {  
+adCard.setAdListener(new SAAdListener() {  
   @Override  
   public void onAdLoaded(SAAdCard card) {  
     adCard.show(); // Start playing the video ad
@@ -168,11 +168,11 @@ SAAdCard adCard = SuperAds.getInstance().createRewardedVideoAdCard(adSize, this)
 ```
 设置广告位:
 ```java
-adCard.setPlacementId("PLACEMENT_ID")
+adCard. setAdUnitId("<ad_unit_id>")
 ```
 设置广告加载的回调:
 ```java
-adCard.setAdListener(new SaAdListener() {  
+adCard.setAdListener(new SAAdListener() {  
   @Override  
   public void onAdLoaded(SAAdCard card) {  
     adCard.show(); // Start playing the video ad
@@ -207,7 +207,7 @@ Create NativeAd instance:
 SAAdCard adCard = SuperAds.getInstance().createNativeAdCard(this);
 ```
 ```java
-adCard.setPlacementId("PLACEMENT_ID")
+adCard. setAdUnitId("<ad_unit_id>")
 ```
 设置UI field来容纳原生广告:
 ```java
@@ -220,7 +220,7 @@ adCard.setPlacementId("PLACEMENT_ID")
   ```
 设置广告加载的回调:
 ```java
-adCard.setAdListener(new SaAdListener() {  
+adCard.setAdListener(new SAAdListener() {  
   @Override  
   public void onAdLoaded(SAAdCard card) {  
     adCard.show(); // Show just loaded ad
