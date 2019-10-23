@@ -23,6 +23,18 @@ Android device or emulator with Android SDK v4.1+
 
 在你的build.gradle里面添加以下库依赖
 ```java
+Project build.gradle
+allprojects {
+  repositories {
+    google()
+    jcenter()
+    maven {
+      url 'https://dl.bintray.com/superads/maven'
+    }
+  }
+}
+
+App build.gradle
 dependencies {
     implementation 'cn.superads:sdk:1.2.6'
 }

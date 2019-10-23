@@ -24,6 +24,18 @@ Android device or emulator with Android SDK v4.1+
 
 Add the following to your dependencies section in module's build.grade file:
 ```java
+Project build.gradle
+allprojects {
+  repositories {
+    google()
+    jcenter()
+    maven {
+      url 'https://dl.bintray.com/superads/maven'
+    }
+  }
+}
+
+App build.gradle
 dependencies {
     implementation 'cn.superads:sdk:1.2.6'
 }
