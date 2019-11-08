@@ -1,5 +1,5 @@
 # Android SDK - SuperADS
-**Latest Version:** 1.2.6
+**Latest Version:** 1.2.7
 
 **Release Date:** 17.10.19
 
@@ -37,7 +37,7 @@ allprojects {
 
 App build.gradle
 dependencies {
-    implementation 'cn.superads:sdk:1.2.6'
+    implementation 'cn.superads:sdk:1.2.7'
 }
 ```
 
@@ -65,7 +65,7 @@ adCard.setContentType(AdContentType.PLAYABLE);
 ```
 Set placement ID (from dashboard):
 ```java
-adCard. setAdUnitId("<ad_unit_id>")
+adCard. setAdUnitId("app=your appId/placement=your placementId")
 ```
 Ad Container View:
 ```java
@@ -115,7 +115,7 @@ adCard.setContentType(AdContentType.PLAYABLE);
 ```
 Set placement ID (from dashboard):
 ```java
-adCard. setAdUnitId("<ad_unit_id>")
+adCard. setAdUnitId("app=your appId/placement=your placementId")
 ```
 Create callback for events:
 ```java
@@ -146,7 +146,7 @@ SAAdCard adCard = SuperAds.getInstance().createVideoAdCard(adSize, this);
 ```
 Set placement ID (from dashboard):
 ```java
-adCard. setAdUnitId("<ad_unit_id>")
+adCard. setAdUnitId("app=your appId/placement=your placementId")
 ```
 Create callback for events:
 ```java
@@ -183,7 +183,7 @@ SAAdCard adCard = SuperAds.getInstance().createRewardedVideoAdCard(adSize, this)
 ```
 Set placement ID (from dashboard):
 ```java
-adCard. setAdUnitId("<ad_unit_id>")
+adCard. setAdUnitId("app=your appId/placement=your placementId")
 ```
 Create callback for events:
 ```java
@@ -221,7 +221,7 @@ Create NativeAd instance:
 SAAdCard adCard = SuperAds.getInstance().createNativeAdCard(this);
 ```
 ```java
-adCard. setAdUnitId("<ad_unit_id>")
+adCard. setAdUnitId("app=your appId/placement=your placementId")
 ```
 Set UI fields to fill in after ad is loaded (optional):
 ```java

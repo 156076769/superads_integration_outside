@@ -1,5 +1,5 @@
 # Android SDK - SuperADS
-**Latest Version:** 1.2.6
+**Latest Version:** 1.2.7
 
 **Release Date:** 17.10.19
 
@@ -36,7 +36,7 @@ allprojects {
 
 App build.gradle
 dependencies {
-    implementation 'cn.superads:sdk:1.2.6'
+    implementation 'cn.superads:sdk:1.2.7'
 }
 ```
 
@@ -62,7 +62,7 @@ adCard.setContentType(AdContentType.PLAYABLE);
 ```
 设置广告位:
 ```java
-adCard. setAdUnitId("<ad_unit_id>")
+adCard. setAdUnitId(""app=your appId/placement=your placementId"")
 ```
 容纳Ad的view:
 ```java
@@ -112,7 +112,7 @@ adCard.setContentType(AdContentType.PLAYABLE);
 ```
 设置广告位:
 ```java
-adCard. setAdUnitId("<ad_unit_id>")
+adCard. setAdUnitId(""app=your appId/placement=your placementId"")
 ```
 设置广告加载的回调:
 ```java
@@ -143,7 +143,7 @@ SAAdCard adCard = SuperAds.getInstance().createVideoAdCard(adSize, this);
 ```
 设置广告位:
 ```java
-adCard. setAdUnitId("<ad_unit_id>")
+adCard. setAdUnitId(""app=your appId/placement=your placementId"")
 ```
 设置广告加载的回调:
 ```java
@@ -180,7 +180,7 @@ SAAdCard adCard = SuperAds.getInstance().createRewardedVideoAdCard(adSize, this)
 ```
 设置广告位:
 ```java
-adCard. setAdUnitId("<ad_unit_id>")
+adCard. setAdUnitId(""app=your appId/placement=your placementId"")
 ```
 设置广告加载的回调:
 ```java
@@ -219,7 +219,7 @@ Create NativeAd instance:
 SAAdCard adCard = SuperAds.getInstance().createNativeAdCard(this);
 ```
 ```java
-adCard. setAdUnitId("<ad_unit_id>")
+adCard. setAdUnitId(""app=your appId/placement=your placementId"")
 ```
 设置UI field来容纳原生广告:
 ```java
