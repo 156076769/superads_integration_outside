@@ -1,7 +1,7 @@
 # Android SDK - SuperADS
-**Latest Version:** 1.2.7
+**Latest Version:** 1.2.8
 
-**Release Date:** 17.10.19
+**Release Date:** 15.12.19
 
 SuperADS SDK 可以为你的App添加横幅，插屏，视频，奖励视频和原生（信息流）广告。
 这个SDK可以运行在Android Phone和Tablets上面。

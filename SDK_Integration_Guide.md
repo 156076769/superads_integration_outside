@@ -1,7 +1,7 @@
 # Android SDK - SuperADS
-**Latest Version:** 1.2.7
+**Latest Version:** 1.2.8
 
-**Release Date:** 17.10.19
+**Release Date:** 15.12.19
 
 This SuperADS SDK allows you to add several Advertisements to your project. 
 From Banner Ad, Interstitial Ad, Video Ad, rewareded Ad and Native Ad. 
